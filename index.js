@@ -39,7 +39,7 @@ function init () {
             },
             {
                 type: 'confirm',
-                message: "Wha is the purpose of the project?",
+                message: "what is the purpose of the project?",
                 name: "education",
             },
             {
