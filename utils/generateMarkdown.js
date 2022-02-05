@@ -12,8 +12,9 @@ const licences = {
 
 }
 
-// functions to construct full license line from inputs.
-// parts
+// functions that returns licence badge 
+
+// If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if (!license) {
     return "";
@@ -35,7 +36,8 @@ function renderLicenseLabel(license) {
   return licences[license][0];
 }
 
-// full
+// function that returns the license section of README
+// If there is no license, return an empty strin
 function renderLicenseSection(license) {
   if (!license) {
     return "No License";
@@ -89,5 +91,5 @@ function generateMarkdown(data) {
   `;
 }
 
-// export
+// export module
 module.exports = generateMarkdown;

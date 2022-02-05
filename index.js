@@ -3,12 +3,11 @@ const inquirer = require("inquirer");
 const generator = require("./utils/generateMarkdown")
 const fs = require("fs");
 
-// array of license choices.
+//  license choices arrary.
 const licences = ['CC 4.0 ShareAlike', 'CC 4.0 NonCommercial', 'CC 4.0 NoDivatives', 'Eclipse Public License', 'Open Database License (ODbL)', 'Public Domain Dedication and License (PDDL)', 'IBM', 'MIT', 'The Unlicense', 'The Do What the Fuck You Want to Public License'];
-// I wrote all of my questions before realizing you wanted us to put it in an array as well, so i didnt feel like re-arranging it all.
 
 
-// main prompt function
+// An array of questions for user input
 function init () {
     inquirer
         .prompt([
@@ -100,12 +99,12 @@ function init () {
         });
 }
 
-// write file function.
+// function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, generator(data), (err) =>
         err ? console.log(err) : console.log(`Success! you have created ${fileName}!`)
     );
 }
 
-
+// Function call to initialize app
 init();
