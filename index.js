@@ -1,4 +1,4 @@
-// required modules
+// constant required modules
 const inquirer = require("inquirer");
 const generator = require("./utils/generateMarkdown")
 const fs = require("fs");
